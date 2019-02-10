@@ -13,9 +13,13 @@
       </p>
     </div>
     <div class="content">
-      <ul>
-        <li v-for="file in uploadedFiles" :key="file.originalname">{{file.originalname}}</li>
-      </ul>
+      <div class="column is-multiline">
+        <div v-for="file in uploadedFiles" :key="file" class="column is-4">
+          <figure class="image">
+            <img :src="file" alt>
+          </figure>
+        </div>
+      </div>
     </div>
   </form>
 </template>
